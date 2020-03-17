@@ -6,13 +6,13 @@ import springhw.beans.HelloBean;
 public class App {
 
 	public static void main(String[] args) {
-		// Создаем контекст приложения из xml файла("src/main/resources/applicationContext.xml")
+		// РЎРѕР·РґР°РµРј РєРѕРЅС‚РµРєСЃС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ РёР· xml С„Р°Р№Р»Р°("src/main/resources/applicationContext.xml")
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        // Считываем бин (объект)
+        // РЎС‡РёС‚С‹РІР°РµРј Р±РёРЅ (РѕР±СЉРµРєС‚)
         HelloBean hb = ctx.getBean("firstBean", HelloBean.class);
-        // Печатаем объект в консоль
+        // РџРµС‡Р°С‚Р°РµРј РѕР±СЉРµРєС‚ РІ РєРѕРЅСЃРѕР»СЊ
         System.out.println(hb);
-        // Закрываем контекст приложения 
+        // Р—Р°РєСЂС‹РІР°РµРј РєРѕРЅС‚РµРєСЃС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ 
         ctx.close();
 	}
 
