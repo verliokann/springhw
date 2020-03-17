@@ -1,13 +1,18 @@
-package springhw.beans;
+﻿package springhw.beans;
 
 public class HelloBean {
 	private String name;
 
 	//Конструктор
+
+	public HelloBean() {}
+
 	public HelloBean(String name) {
 		super();
 		this.name = name;
 	}
+
+  
 
 	//Getter
 	public String getName() {
