@@ -7,10 +7,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="firstBean"
-        class="springhw.beans.HelloBean">
-        <constructor-arg value="Spring - это интересно!"/>
+    <bean id="factoryBean" 
+        class="springhw.beans.FactoryBean">
     </bean>
+
+    <bean id="firstBean" class="springhw.beans.HelloBean" 
+        factory-method="createBean" factory-bean="factoryBean">
+        <constructor-arg name="message" value="Hello I'm HelloBean from factory"/>
+    </bean>
+
     <bean id="printerBean"
         class="springhw.beans.PrinterBean">
     </bean>

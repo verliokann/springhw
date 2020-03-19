@@ -4,9 +4,6 @@ public class HelloBean {
     private String name;
 
     // Конструктор
-    public HelloBean() {
-    }
-
     public HelloBean(String name) {
         super();
         this.name = name;
