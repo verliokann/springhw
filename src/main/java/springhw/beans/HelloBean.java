@@ -3,18 +3,19 @@
 public class HelloBean {
 	private String name;
 
-	//Конструктор
-
+	//Конструкторы
 	public HelloBean() {}
-
 	public HelloBean(String name) {
 		super();
 		this.name = name;
 	}
 
-  
-
-	//Getter
+	// static Фабричный метод
+	public static HelloBean getHelloBean(String name) {		
+		return new HelloBean(name+"   (Тут вызываем конструктор из фабричного метода)");
+	}
+	
+  	//Getter
 	public String getName() {
 		return name;
 	}
