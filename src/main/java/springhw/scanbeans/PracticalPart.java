@@ -2,7 +2,7 @@ package springhw.scanbeans;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("pp")
 public class PracticalPart implements ITopicPart{
 
 	@Override

@@ -23,7 +23,7 @@ public class SpringConfig {
 	// Внедряем завимость (конфигурируем подключение принтера к компьютеру)
 	@Bean
 	public Computer computer() {
-		return new Computer(smsPrinter());
+		return new Computer(vkPrinter());
 	}
 	
 }

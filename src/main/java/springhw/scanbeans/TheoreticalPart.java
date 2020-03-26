@@ -1,19 +1,26 @@
 package springhw.scanbeans;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-@Component
-public class TheoreticalPart implements ITopicPart {
+@Component("tp")
+@PropertySource("topicpart.properties")
+public class TheoreticalPart implements ITopicPart {	
+	private String content;
 
-	@Override
 	public String getContent() {
-		return "Содержание теоретической части";
+		return content;
+	}
+
+	@Value("${tp.content}")
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	@Override
 	public String toString() {
 		return "TheoreticalPart [getContent()=" + getContent() + "]";
 	}
-
 	
 }

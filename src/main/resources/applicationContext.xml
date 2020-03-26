@@ -18,8 +18,8 @@
     <!-- ************************************************************************************** -->
 
     <!-- Инициализация бина через сеттер  -->
-	<bean id="secondBean" class="springhw.beans.HelloBean">
-	        <property name="name" value="Spring - это очень очень интересно!"/>	        
+	<bean id="secondBean" class="springhw.beans.HelloBean">		
+	        <property name="name" value="Spring - это очень очень интересно!"/>                	        
     </bean>
 
 	<!-- ************************************************************************************** -->
