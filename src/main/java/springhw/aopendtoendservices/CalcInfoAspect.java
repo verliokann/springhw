@@ -19,12 +19,12 @@ import org.springframework.stereotype.Component;
 public class CalcInfoAspect {
 	//@Before("execution(* springhw.aopendtoendservices.*.*(..))")
 
-	@Before("execution(* springhw.aopendtoendservices.NumGenerator.getSqrtSum(..))")
+	@Before("execution(* springhw.aopendtoendservices.*.*(..))")
     public void calcStartInfo(JoinPoint jp) {
     	System.out.println(""+jp.getSignature());
     }
 	
-	@Around("execution(* springhw.aopendtoendservices.NumGenerator.getSqrtSum(..))")
+	@Around("execution(* springhw.aopendtoendservices.*.*(..))")
 	public Object checkExecutionTime(ProceedingJoinPoint jp) throws Throwable{		
 		long start = System.currentTimeMillis();
 		System.out.println("---------------------"+ DateFormat.getTimeInstance().format(start)+ "-------------");		

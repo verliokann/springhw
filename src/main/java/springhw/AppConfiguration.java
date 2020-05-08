@@ -10,6 +10,7 @@ public class AppConfiguration {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
 		ctx.getBean("computer",Computer.class).print();
+		ctx.close();
 	}
 
 }
