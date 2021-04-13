@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="source.beans"/>
+
+    <!-- ************************************************************************************** -->
+    <bean id="Мясо" class="source.beans.Products" factory-method="getProducts"  scope="prototype">
+        <constructor-arg name="type" value="Мясо"/>
+        <constructor-arg name="weight" value="1"/>
+        <constructor-arg name="price" value="200"/>
+    </bean>
+    <bean id="Хлеб" class="source.beans.Products" factory-method="getProducts"  scope="prototype">
+        <constructor-arg name="type" value="Хлеб"/>
+        <constructor-arg name="weight" value="1"/>
+        <constructor-arg name="price" value="60"/>
+    </bean>
+    <bean id="Томаты" class="source.beans.Products" factory-method="getProducts"  scope="prototype">
+        <constructor-arg name="type" value="Томаты"/>
+        <constructor-arg name="weight" value="1"/>
+        <constructor-arg name="price" value="150"/>
+    </bean>
+    <bean id="Масло" class="source.beans.Products" factory-method="getProducts"  scope="prototype">
+        <constructor-arg name="type" value="Масло"/>
+        <constructor-arg name="weight" value="1"/>
+        <constructor-arg name="price" value="400"/>
+    </bean>
+</beans>
