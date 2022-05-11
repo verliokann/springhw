@@ -1,4 +1,4 @@
-﻿package springhw.beans;
+package springhw.beans;
 
 public class HelloBean {
 	private String name;
